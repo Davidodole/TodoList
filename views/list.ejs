@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="box" id="heading">
+        <h1> <%= kindOfData %> </h1>
+    </div>
+    <div class="box">
+            <% var i = 0; %>
+          <%  while(i<addItems.length ){ %>
+             <div class="item">
+                <input type="checkbox">
+                <p> <%= addItems[i] %></p>
+                <% i++; %>
+             </div>
+           
+          <%  }  %>
+             
+          <form class="item" action="/" method="post">
+            <input id="inputTxt" type="text" name="newItem" placeholder="New Item" autocomplete="off" required>
+            <button type="submit">+</button>
+        </form>
+    </div>
+
+
+    <footer><p>&copy; copyright od David castillo || <%= {year} %></p></footer>
+</body>
+</html>
